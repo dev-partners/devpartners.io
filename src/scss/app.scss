@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400|Roboto+Slab:300,400|Roboto+Mono:300,400&display=swap');
+
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+body {
+  background-image: url('/dist/img/home-bg.jpg');
+}
+
+.home {
+  background-image: url('/dist/img/graph-paper.png');
+}
+
+.cursor {
+  -webkit-animation: color-change 1s infinite;
+  -moz-animation: color-change 1s infinite;
+  -o-animation: color-change 1s infinite;
+  -ms-animation: color-change 1s infinite;
+  animation: color-change 1s infinite;
+}
+
+@-webkit-keyframes color-change {
+  0% { color: white; }
+  50% { color: black; }
+  100% { color: white; }
+}
+@-moz-keyframes color-change {
+  0% { color: white; }
+  50% { color: black; }
+  100% { color: white; }
+}
+@-ms-keyframes color-change {
+  0% { color: white; }
+  50% { color: black; }
+  100% { color: white; }
+}
+@-o-keyframes color-change {
+  0% { color: white; }
+  50% { color: black; }
+  100% { color: white; }
+}
+@keyframes color-change {
+  0% { color: white; }
+  50% { color: black; }
+  100% { color: white; }
+}
+
+@responsive {
+  .rotate-45 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .-rotate-45 {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
