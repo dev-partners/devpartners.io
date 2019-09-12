@@ -12,7 +12,8 @@
     "laravel-mix": "^4.0.16",
     "tailwindcss": "^1.0.4",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.6"
+    "vue-router": "^3.0.6",
+    "lodash": "^4.17.13"
   },
   "devDependencies": {
     "resolve-url-loader": "2.3.1",
