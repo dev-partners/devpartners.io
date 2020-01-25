@@ -1,74 +1,47 @@
-window.Vue = require('vue');
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import routes from "./routes"
+window._ = require('lodash');
+
+Vue.use(VueRouter);
+
+Vue.component('technologies', require('./components/sections/Technologies').default);
+Vue.component('vue-svg', require('./components/partials/SVG').default);
+Vue.component('rounded-button', require('./components/partials/RoundedButton').default);
+
+const router = new VueRouter({
+    routes
+});
 
 const app = new Vue({
+    router,
     el: '#app',
     data: {
-        qualities: ['technology', 'data', 'marketing'],
-        special_quality: 'technology',
         mobileMenu: false,
     },
 
-    mounted() {
-        let vm = this;
+    mounted() {},
 
-        setTimeout(function() {
-            vm.setNewQuality();
-        }, 3000);
-    },
-
-    methods: {
-
-        setNewQuality() {
-            let vm = this;
-
-            vm.special_quality = '';
-
-            let shifted = vm.qualities.shift();
-
-            setTimeout(function() {
-                vm.addNextLetter(shifted, 0);
-            }, 200);
-
-            vm.qualities.push(shifted);
-        },
-
-        addNextLetter(word, position) {
-            let vm = this;
-
-            vm.special_quality += word[position];
-
-            if (word[position+1]) {
-                setTimeout(function() {
-                    vm.addNextLetter(word, position + 1);
-                }, 150);
-            }
-            else {
-                setTimeout(function() {
-                    vm.setNewQuality();
-                }, 3000);
-            }
-        }
-
-    }
+    methods: {}
 });
 
-function verticallyCenterItems()
+router.beforeEach((to, from, next) => {
+    app.$data.mobileMenu = false;
+    window.scrollTo(0, 0);
+    return next()
+})
+
+function controlActiveMenuBar()
 {
-    let vertically_aligned_elements = document.getElementsByClassName('vertical-align-center');
-    let window_height = window.innerHeight;
-
-    for (let i = 0; i < vertically_aligned_elements.length; i++) {
-        let element_height = vertically_aligned_elements[i].clientHeight;
-        let top_padding = parseInt(((window_height - element_height) / 2));
-
-        top_padding = top_padding < 0 ? 0 : top_padding;
-        vertically_aligned_elements[i].style.paddingTop = top_padding.toString() + 'px';
+    let header = document.getElementById('main-header');
+    let header_height = header.offsetHeight;
+    if (window.scrollY > header_height) {
+        header.classList.add('active');
+    }
+    else {
+        header.classList.remove('active');
     }
 }
 
-window.addEventListener('resize', function() {
-    verticallyCenterItems();
-});
-window.addEventListener('load', function() {
-    verticallyCenterItems();
-});
+window.addEventListener('scroll', controlActiveMenuBar);
+window.addEventListener('load', controlActiveMenuBar);

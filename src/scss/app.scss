@@ -5,11 +5,11 @@
 @import "~tailwindcss/utilities";
 
 body {
-  background-image: url('/dist/img/home-bg.jpg');
 }
 
 .home {
-  background-image: url('/dist/img/graph-paper.png');
+  background-image: url('/dist/img/home-bg.jpg');
+  //background-image: url('/dist/img/graph-paper.png');
 }
 
 .cursor {
@@ -22,27 +22,27 @@ body {
 
 @-webkit-keyframes color-change {
   0% { color: white; }
-  50% { color: black; }
+  50% { color: transparent; }
   100% { color: white; }
 }
 @-moz-keyframes color-change {
   0% { color: white; }
-  50% { color: black; }
+  50% { color: transparent; }
   100% { color: white; }
 }
 @-ms-keyframes color-change {
   0% { color: white; }
-  50% { color: black; }
+  50% { color: transparent; }
   100% { color: white; }
 }
 @-o-keyframes color-change {
   0% { color: white; }
-  50% { color: black; }
+  50% { color: transparent; }
   100% { color: white; }
 }
 @keyframes color-change {
   0% { color: white; }
-  50% { color: black; }
+  50% { color: transparent; }
   100% { color: white; }
 }
 
@@ -62,4 +62,44 @@ body {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+}
+
+.heading {
+  transition: background-color 0.5s ease;
+  &.active {
+    @apply .bg-gray-950;
+  }
+}
+
+.transition-all {
+  transition: all 1s ease-in-out;
+}
+
+.highlight {
+  &-pink {
+    @apply .bg-pink-500 .py-1 .px-2 .text-white;
+  }
+  &-blue {
+    @apply .bg-blue-500 .py-1 .px-2 .text-white;
+  }
+}
+
+.underline {
+  &-pink {
+    @apply .border-b-2 .border-pink-500;
+  }
+}
+
+@responsive {
+  .glow {
+    box-shadow: 0 0 60px 60px rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transition: opacity .5s;
 }

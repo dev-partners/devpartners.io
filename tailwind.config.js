@@ -1,9 +1,27 @@
 module.exports = {
+    variants: ['important', 'responsive', 'hover', 'focus', 'active', 'visited', 'disabled'],
+    plugins: [
+        function({ addVariant }) {
+            addVariant('important', ({ container }) => {
+                container.walkRules(rule => {
+                    rule.selector = `.\\!${rule.selector.slice(1)}`
+                    rule.walkDecls(decl => {
+                        decl.important = true
+                    })
+                })
+            })
+        }
+    ],
     theme: {
+        container: {
+            center: true,
+            padding: '1.4rem',
+        },
         colors: {
 
-            white: '#fff',
+            transparent: 'transparent',
 
+            white: '#fff',
             black: '#000',
 
             pink: {
@@ -16,6 +34,7 @@ module.exports = {
                 700: '#831941',
                 800: '#621231',
                 900: '#410C20',
+                '900-95%': 'rgba(65, 12, 32, 0.95)'
             },
 
             blue: {
@@ -28,9 +47,11 @@ module.exports = {
                 700: '#136298',
                 800: '#0E4972',
                 900: '#0A314C',
+                '900-95%': 'rgba(8, 36, 56, 0.95)'
             },
 
             gray: {
+                50: '#f8f8f8',
                 100: '#F1F1F1',
                 200: '#DDDDDD',
                 300: '#C9C9C9',
@@ -40,6 +61,8 @@ module.exports = {
                 700: '#474747',
                 800: '#363636',
                 900: '#242424',
+                950: '#111111',
+                '950-90%': "rgba(17, 17, 17, 0.9)"
             },
         },
 
@@ -99,6 +122,11 @@ module.exports = {
             height: {
                 '1px': '1px',
                 '2px': '2px',
+            },
+
+            width: {
+                '1/8': '12.5%',
+                '1/10': '10%',
             }
         },
     }

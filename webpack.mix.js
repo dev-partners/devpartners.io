@@ -17,9 +17,13 @@ mix.js('src/js/app.js', 'dist/js/')
     .sass('src/scss/app.scss', 'dist/css/')
     .options({
         processCssUrls: false,
-        postCss: [ tailwindcss('./tailwind.config.js') ],
+        postCss: [tailwindcss('./tailwind.config.js')],
     })
-    .purgeCss({
-        paths: ['./index.html'],
+
+if (mix.inProduction()) {
+    mix.purgeCss({
+        paths: ['./index.html', './js/components/'],
         folders: ['src'],
+        extractorPattern: /[A-Za-z0-9-_:!\/]+/g
     });
+}
