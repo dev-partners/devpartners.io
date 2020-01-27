@@ -1,0 +1,41 @@
+---
+title: "Success Stories"
+permalink: /success-stories
+layout: app
+navigation: 2
+---
+
+<div>
+    <div class="success-stories home bg-gray-950 lg:min-h-screen bg-repeat py-10 lg:flex items-center py-48">
+        <div class="container mx-auto px-6">
+            <div>
+                <div class="w-full lg:w-2/3 mx-auto text-white text-center">
+                    <h2 class="text-4xl text-white lg:text-5xl font-serif mb-6 font-medium">
+                        Shared Success
+                    </h2>
+                    <p class="text-lg font-medium leading-relaxed text-blue-100">
+                        When our client partners have success due in part to the technology we provided,
+                        we feel successful as well. This success is what <span class="underline-pink">drives and motivates us</span>, and is at the core
+                        of our thinking and approach.
+                    </p>
+                    <div class="mt-24">
+                        <div>
+                            <rounded-button to="#stories" class="bg-white-10%">
+                                Client Partner Success Stories
+                            </rounded-button>
+                        </div>
+                        <div>
+                            <rounded-button to="#stories">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="chevron-down" class="h-4 mt-4 inline mx-auto svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z"></path></svg>
+                            </rounded-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="stories"></a>
+    {% include partials/stories/uncs.html %}
+    {% include partials/stories/thesmartride.html %}
+    {% include partials/stories/bewell.html %}
+</div>

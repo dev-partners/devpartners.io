@@ -1,0 +1,6 @@
+exclude: ['resources', 'package.json', 'yarn.lock', 'package-lock.json', 'mix-manifest.json', 'tailwind.config.js', 'webpack.mix.js', '.idea']
+permalink: /:categories/:year/:month/:day/:title
+include: ['_pages']
+collections:
+  - team
+  - opportunities
