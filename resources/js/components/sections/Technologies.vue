@@ -1,21 +1,28 @@
 <template>
     <div>
-        <div class="min-h-screen flex items-center w-full bg-repeat" id="tech-we-use">
-            <div class="container text-center glow">
-                <h2 class="text-4xl lg:text-6xl font-serif mb-6 -mt-24 text-gray-800">Only The Best</h2>
-                <p class="text-xl mx-auto block lg:w-3/4 leading-loose">We only work with the <span class="italic">finest, industry-trusted technologies and
-                    platforms</span> to deliver the amazing user experiences and apps that work for your organization. Our passion for technology and innovation translates to better products for our partners.
-                </p>
-                <div class="flex text-gray-700 justify-center items-center my-16">
-                    <vue-svg v-for="feature in featured_tech" v-html="feature.icon" :key="feature.name" class="mx-4"></vue-svg>
-                </div>
-                <div class="my-16">
-                    <rounded-button class="bg-blue-700 hover:bg-blue-800 text-white text-xl py-2 px-8 font-bold" to="/ping">Work With Us</rounded-button>
-                </div>
+        <div class="page-snap min-h-screen flex items-center bg-repeat py-24 md:py-32 lg:py-48 text-gray-800" id="tech-we-use">
+            <div class="container">
+                <div class="text-center glow">
+                    <h2 class="text-4xl lg:text-6xl font-serif mb-6 text-gray-800">Only The Best</h2>
+                    <p class="text-xl mx-auto block lg:w-3/4 leading-loose">We only work with the <span class="italic">finest, industry-trusted technologies and
+                    platforms</span> to deliver the amazing user experiences and apps that work for your organization.
+                        Our passion for technology and innovation translates to better products for our partners.
+                    </p>
+                    <div class="flex text-gray-700 justify-center items-center my-16">
+                        <vue-svg v-for="feature in featured_tech" v-html="feature.icon" :key="feature.name"
+                                 class="mx-2 md:mx-3 lg:mx-4"></vue-svg>
+                    </div>
+                    <div class="my-16">
+                        <rounded-button class="bg-blue-700 hover:bg-blue-800 text-white text-xl py-2 px-8 font-bold"
+                                        to="/ping">Work With Us
+                        </rounded-button>
+                    </div>
 
-                <p class="italic my-24 text-gray-600">
-                    <a href="https://github.com/dev-partners" class="text-gray-400" target="_blank">Check out our contributions to Open Source Software</a>
-                </p>
+                    <p class="italic mt-24 text-gray-600">
+                        <a href="https://github.com/dev-partners" class="text-gray-400" target="_blank">Check out our
+                            contributions to Open Source Software</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

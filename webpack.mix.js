@@ -13,8 +13,8 @@ require('laravel-mix-purgecss');
  |
  */
 
-mix.js('src/js/app.js', 'dist/js/')
-    .sass('src/scss/app.scss', 'dist/css/')
+mix.js('resources/js/app.js', 'js/')
+    .sass('resources/scss/app.scss', 'css/')
     .options({
         processCssUrls: false,
         postCss: [tailwindcss('./tailwind.config.js')],
@@ -22,7 +22,7 @@ mix.js('src/js/app.js', 'dist/js/')
 
 if (mix.inProduction()) {
     mix.purgeCss({
-        paths: ['./index.html', './js/components/'],
+        paths: ['./index.html', './js/components/', '_site'],
         folders: ['src'],
         extractorPattern: /[A-Za-z0-9-_:!\/]+/g
     });
