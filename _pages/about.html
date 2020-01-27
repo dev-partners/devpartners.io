@@ -5,23 +5,23 @@ layout: app
 navigation: 1
 ---
 
-<div class="home bg-gray-950 bg-repeat flex items-center">
-    <div class="container text-white">
+<div class="bg-gray-100 text-gray-800 bg-repeat flex items-center pt-48 pb-32">
+    <div class="container">
         <div class="text-md lg:text-lg">
-            <div class="w-full lg:w-2/3 mx-auto text-center py-32">
-                <h2 class="text-4xl text-white lg:text-5xl font-serif mb-6 font-medium">
-                    About Us
+            <div class="w-full lg:w-2/3 mx-auto text-center">
+                <h2 class="text-4xl text-white lg:text-5xl font-serif mb-12 font-medium">
+                    <span class="bg-gray-950 py-3 px-6">About Us</span>
                 </h2>
-                <p class="my-6 text-blue-100">We believe that small business is the lifeblood of any great community, and yet building a successful business is more difficult than ever in today's crowded, globally connected world. Over the last decade, we've demonstrated that innovative ideas and technology make it possible for any business to be a disruptor and reshape their industry.</p>
-                <p class="my-6 text-blue-100">We treat our clients' business as if it was our own, partnering to grow revenue and increase operational efficiencies. Through brainstorming and collaboration, we're able to identify the software, data analytics and marketing strategies that deliver the greatest return on investment. Our passion is finding a faster, smarter, more efficient way to get the job done.</p>
+                <p class="my-6 text-gray-900">We believe that small business is the lifeblood of any great community, and yet building a successful business is more difficult than ever in today's crowded, globally connected world. Over the last decade, we've demonstrated that innovative ideas and technology make it possible for any business to be a disruptor and reshape their industry.</p>
+                <p class="my-6 text-gray-900">We treat our clients' business as if it was our own, partnering to grow revenue and increase operational efficiencies. Through brainstorming and collaboration, we're able to identify the software, data analytics and marketing strategies that deliver the greatest return on investment. Our passion is finding a faster, smarter, more efficient way to get the job done.</p>
 
                 <div class="mt-12">
-                    <rounded-button to="#team" class="bg-white-10%">
+                    <rounded-button to="#team" class="text-white bg-blue-800">
                         Check Out Our Team
                     </rounded-button>
                 </div>
                 <div>
-                    <rounded-button to="#team">
+                    <rounded-button to="#team" class="text-blue-800">
                         <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="chevron-down" class="h-4 mt-4 inline mx-auto svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z"></path></svg>
                     </rounded-button>
                 </div>
@@ -41,7 +41,7 @@ navigation: 1
         <div class="lg:flex flex-wrap justify-center">
             {% assign members = site.team | sort: "position" %}
             {% for member in members %}
-            <div class="w-full md:w-1/2 lg:w-1/4">
+            <div class="w-full md:w-1/2 lg:w-1/4 mb-12">
                 <div class="px-6">
                     <img src="{{ member.photo }}" alt="{{ member.name }}" class="w-full rounded">
                     <div class="my-4">
