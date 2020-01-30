@@ -4,3 +4,6 @@ requirements: Exceptional organizational skills, determination, and love for tec
 ---
 
 Description to be updated soon!
+
+<!--more-->
+
