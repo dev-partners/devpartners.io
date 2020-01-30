@@ -1,5 +1,4 @@
 module.exports = {
-    variants: ['important', 'responsive', 'hover', 'focus', 'active', 'visited', 'disabled'],
     plugins: [
         function({ addVariant }) {
             addVariant('important', ({ container }) => {
@@ -122,6 +121,10 @@ module.exports = {
                 '60': '18rem',
                 '96': '24rem',
                 '128': '32rem'
+            },
+
+            borderWidth: {
+                '1px': '1px',
             },
 
             height: {

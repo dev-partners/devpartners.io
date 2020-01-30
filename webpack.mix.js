@@ -19,11 +19,7 @@ mix.js('resources/js/app.js', 'js/')
         processCssUrls: false,
         postCss: [tailwindcss('./tailwind.config.js')],
     })
-
-if (mix.inProduction()) {
-    mix.purgeCss({
-        paths: ['./index.html', './js/components/', '_site'],
-        folders: ['src'],
-        extractorPattern: /[A-Za-z0-9-_:!\/]+/g
-    });
-}
+    .purgeCss({
+        folders: ['./_site'],
+        extractorPattern: /[A-Za-z0-9-_:%!\/]+/g
+    })

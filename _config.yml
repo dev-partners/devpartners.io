@@ -2,5 +2,15 @@ exclude: ['resources', 'package.json', 'yarn.lock', 'package-lock.json', 'mix-ma
 permalink: /:categories/:year/:month/:day/:title
 include: ['_pages']
 collections:
-  - team
-  - opportunities
+  team:
+  opportunities:
+    output: true
+    permalink: /careers/opportunities/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "opportunities"
+    values:
+      layout: "opportunities"
+excerpt_separator: <!--more-->

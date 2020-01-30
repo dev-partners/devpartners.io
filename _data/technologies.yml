@@ -1,0 +1,16 @@
+- name: Laravel
+  url: https://laravel.com
+- name: VueJS
+  url: https://vuejs.org/
+- name: MySQL
+  url: https://www.mysql.com/
+- name: Redis
+  url: https://redis.io/
+- name: PHP
+  url: https://www.php.net/
+- name: TailwindCSS
+  url: https://tailwindcss.com/
+- name: SASS
+  url: https://sass-lang.com/
+- name: Jekyll
+  url: https://jekyllrb.com/

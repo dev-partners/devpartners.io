@@ -103,3 +103,20 @@ body {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   transition: opacity .5s;
 }
+
+
+// Some defaults for pages written in Markdown
+
+.jekyll-content {
+  h2 {
+    @apply .text-3xl .font-serif .mt-8 .mb-4
+    }
+
+  h3 {
+    @apply .text-2xl .font-serif .mt-8 .mb-4
+    }
+
+  ul {
+    @apply .list-disc .ml-8
+  }
+}

@@ -7,32 +7,14 @@ Vue.component('technologies', require('./components/sections/Technologies').defa
 Vue.component('vue-svg', require('./components/partials/SVG').default);
 Vue.component('rounded-button', require('./components/partials/RoundedButton').default);
 Vue.component('home', require('./components/Home').default);
+Vue.component('packagist-downloads', require('./components/PackagistDownloads').default);
+Vue.component('github-repos', require('./components/GitHubRepos').default);
 // import {scrollTo} from 'scroll-js';
 
 const app = new Vue({
     el: '#app',
     data: {
         mobileMenu: false,
-    },
-
-    mounted() {
-        // window.addEventListener('hashchange', (e) => {
-        //     e.preventDefault();
-        //     let hash = window.location.hash.replace('#', '');
-        //     let element = document.getElementById(hash);
-        //     if (element) {
-        //         let top = element.offsetTop;
-        //         scrollTo(document.body, { top: top, behavior: 'smooth', easing: 'ease-in-out'})
-        //             .then(() => {
-        //                 console.log('scrolled')
-        //             })
-        //             .catch((error) => {
-        //                 console.log(error);
-        //             });
-        //     }
-        //
-        //     return false;
-        // });
     },
 
     methods: {
