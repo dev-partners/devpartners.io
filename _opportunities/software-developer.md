@@ -24,6 +24,13 @@ in production environment
 - Experience with Redis or Elasticache
 - Ability to quote lines from the _The Office_ in everyday situations
 
+### Most Important
+
+We are looking for someone with the right skills, of course. But ultimately, the most important thing we look for in 
+a candidate is a passion for producing great software, the willingness to learn (regardless of experience or skill level), 
+and a great attitude. We would rather have someone who has slightly less experience, but will make up for it with a 
+dedication for growth and good work ethic.
+
 ### Responsibilities
 
 The selected candidate will be responsible for collaborating with other team members to create interactive web applications. 

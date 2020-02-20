@@ -9,6 +9,7 @@ Vue.component('rounded-button', require('./components/partials/RoundedButton').d
 Vue.component('home', require('./components/Home').default);
 Vue.component('packagist-downloads', require('./components/PackagistDownloads').default);
 Vue.component('github-repos', require('./components/GitHubRepos').default);
+Vue.component('mailchimp-subscribe', require('vue-mailchimp-subscribe').default);
 // import {scrollTo} from 'scroll-js';
 
 const app = new Vue({
