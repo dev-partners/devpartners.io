@@ -1,8 +1,10 @@
-exclude: ['resources', 'package.json', 'yarn.lock', 'package-lock.json', 'mix-manifest.json', 'tailwind.config.js', 'webpack.mix.js', '.idea']
+exclude: ['resources', 'package.json', 'yarn.lock', 'package-lock.json', 'mix-manifest.json', 'tailwind.config.js', 'webpack.mix.js', '.idea', 'resources']
 permalink: /:categories/:year/:month/:day/:title
 include: ['_pages']
 collections:
   team:
+    output: true
+    permalink: /blog/authors/:name
   opportunities:
     output: true
     permalink: /careers/opportunities/:name
@@ -13,4 +15,14 @@ defaults:
       type: "opportunities"
     values:
       layout: "opportunities"
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "articles"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "blog"
 excerpt_separator: <!--more-->
