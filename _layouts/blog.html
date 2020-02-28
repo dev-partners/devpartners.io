@@ -8,7 +8,7 @@ layout: app
     <div class="bg-gray-950-90%">
         <div class="container min-h-screen flex items-center py-24">
             <div class="w-full text-center sm:text-left sm:w-3/4 lg:w-1/2 xl:w-2/3">
-                <h1 class="text-3xl sm:text-4xl xl:text-5xl font-sans mb-4">{{ page.title }}</h1>
+                <h1 class="text-4xl lg:text-5xl xl:text-6xl font-sans mb-4">{{ page.title }}</h1>
                 {% assign subpage = site.team | where: 'slug', page.author %}
                 <div class="sm:text-lg font-mono">
                     <a href="{{ subpage[0].url }}" class="text-blue-200 flex justify-center sm:justify-start items-center opacity-75 hover:opacity-100">
@@ -31,18 +31,20 @@ layout: app
                 </div>
             </div>
         </div>
-        <div class="text-center md:right-0 md:absolute -mt-8 text-sm px-4 text-gray-600">{{ page.photo_credit }}</div>
+        <div class="text-center md:right-0 md:absolute lg:-mt-12 text-sm px-4 text-gray-600 py-4">{{ page.photo_credit }}</div>
     </div>
 </div>
 <a id="content"></a>
 <div class="bg-white text-gray-950 py-12">
     <div class="container xl:flex">
-        <div class="w-full xl:w-2/3 jekyll-content text-lg text-gray-900">
+        <div class="w-full xl:pr-12 xl:w-2/3 jekyll-content text-xl text-gray-900">
             <div class="text-mono text-base text-gray-600 sm:flex items-center mb-8">
                 <div class="mr-8">{{ page.date | date: "%B %e, %Y" }}</div>
-                {% for tag in page.tags %}
-                <div class="mr-4">{{ tag }}</div>
-                {% endfor %}
+                <div class="flex mt-3 sm:mt-0 text-pink-500">
+                    {% for tag in page.tags %}
+                    <div class="mr-4">{{ tag }}</div>
+                    {% endfor %}
+                </div>
             </div>
             {{ content }}
         </div>

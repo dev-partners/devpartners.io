@@ -1,1 +1,1 @@
-{% assign nav_links = site.pages | where_exp: "item", "item.navigation" | sort: "navigation" %}
+{% assign nav_links = site.data.nav.items %}

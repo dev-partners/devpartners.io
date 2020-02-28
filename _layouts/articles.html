@@ -14,6 +14,8 @@ layout: app
             </h3>
         </div>
 
+        {% assign featured_posts = paginator.posts %}
+
         {% if page.collection == "team" %}
         <div class="team-headline flex items-center">
             <div class="mr-6">
@@ -24,25 +26,40 @@ layout: app
                 <h3 class="font-mono text-blue-700">{{ page.title }}</h3>
             </div>
         </div>
+        {% assign featured_posts = site.posts | where: 'author', page.slug %}
         {% endif %}
 
-        <div id="articles" class="my-12 -mx-6">
+        <div id="articles" class="my-12 -mx-6 min-h-screen">
             <div class="flex flex-wrap">
-                {% for i in (1..9) %}
+                {% for featured_post in featured_posts %}
                 <div class="w-full md:w-1/2 lg:w-1/3 px-6 mb-12">
-                    <div class="h-96 md:h-64 bg-cover bg-no-repeat bg-center rounded-sm"
-                         style="background-image: url('https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=60')">
-                    </div>
+                    <a href="{{ featured_post.url }}" class="-mx-6 md:mx-0 bg-gray-950 lg:border-b-4 border-gray-900 lg:hover:border-pink-500 block h-64 md:h-64 bg-cover bg-no-repeat bg-center rounded-sm"
+                         style="background-image: url('{{ featured_post.main_image }}')">
+                    </a>
                     <div class="text-sm text-gray-500 flex items-center my-3">
-                        <span class="mr-6">February 2, 2020</span>
-                        <span class="mr-4">laravel</span>
-                        <span class="mr-4">vuejs</span>
+                        <span class="mr-6">{% assign post_date = featured_post.date | date: "%B %e, %Y" %}{{ post_date }}</span>
+                        {% for tag in featured_post.tags %}
+                        <span class="mr-4">{{ tag }}</span>
+                        {% endfor %}
                     </div>
-                    <div class="text-xl font-medium my-3">
-                        <a href="#">Hello World and Some Other Title Words to Make Long Title</a>
+                    <div class="text-2xl font-medium my-3">
+                        <a href="{{ featured_post.url }}" class="hover:text-blue-700">{{ featured_post.title }}</a>
                     </div>
                 </div>
                 {% endfor %}
+            </div>
+        </div>
+
+        <div id="pagination" class="flex justify-between">
+            <div class="prev">
+                {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path }}">&larr; Previous Page</a>
+                {% endif %}
+            </div>
+            <div class="next">
+                {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}">Next Page &rarr;</a>
+                {% endif %}
             </div>
         </div>
 
