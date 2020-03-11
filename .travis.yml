@@ -15,6 +15,6 @@ after_success:
   - git add css/*.css
   - git add js/*.js
   - git remote add origin https://${GH_TOKEN}@github.com/dev-partners/devpartners.io.git > /dev/null 2>&1
-  - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+  - git commit --message "Travis asset build"
   - git push origin $TRAVIS_BRANCH
   - echo "Success"
