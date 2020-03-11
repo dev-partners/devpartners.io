@@ -6,10 +6,9 @@ notifications:
 env:
   - APP_ENV=testing
 install:
-  - bundle install
-  - yarn install
+  - gem install jekyll
 before_script:
-  - bundle exec jekyll build
+  - jekyll build
 script:
   - yarn run prod
 after_success:
