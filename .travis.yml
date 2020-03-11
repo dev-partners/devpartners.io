@@ -1,5 +1,6 @@
 language: node_js
-node_js: "node"
+node_js:
+  - 12.16
 notifications:
   slack: devpartners-io:SLtbju2Qy2gpKF1zoyU1gJJz
 env:
