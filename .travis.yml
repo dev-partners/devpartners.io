@@ -1,0 +1,12 @@
+language: node_js
+node_js: "node"
+notifications:
+  slack: devpartners-io:SLtbju2Qy2gpKF1zoyU1gJJz
+env:
+  - APP_ENV=testing
+install:
+  - yarn install
+script:
+  - yarn run prod
+after_success:
+  - echo "Success"
