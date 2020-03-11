@@ -1,11 +1,14 @@
-language: node_js
-node_js: "node"
+language: ruby
+rvm:
+  - 2.6.3
 notifications:
   slack: devpartners-io:SLtbju2Qy2gpKF1zoyU1gJJz
 env:
   - APP_ENV=testing
 install:
   - yarn install
+before_script:
+  - bundle exec jekyll build
 script:
   - yarn run prod
 after_success:
