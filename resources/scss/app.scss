@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400|Roboto+Slab:300,400|Roboto+Mono:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Slab:300,400|Roboto+Mono:300,400&display=swap');
 
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
@@ -21,29 +21,63 @@ body {
 }
 
 @-webkit-keyframes color-change {
-  0% { color: white; }
-  50% { color: transparent; }
-  100% { color: white; }
+  0% {
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: white;
+  }
 }
+
 @-moz-keyframes color-change {
-  0% { color: white; }
-  50% { color: transparent; }
-  100% { color: white; }
+  0% {
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: white;
+  }
 }
+
 @-ms-keyframes color-change {
-  0% { color: white; }
-  50% { color: transparent; }
-  100% { color: white; }
+  0% {
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: white;
+  }
 }
+
 @-o-keyframes color-change {
-  0% { color: white; }
-  50% { color: transparent; }
-  100% { color: white; }
+  0% {
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: white;
+  }
 }
+
 @keyframes color-change {
-  0% { color: white; }
-  50% { color: transparent; }
-  100% { color: white; }
+  0% {
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: white;
+  }
 }
 
 @responsive {
@@ -66,6 +100,7 @@ body {
 
 .heading {
   transition: background-color 0.5s ease;
+
   &.active {
     @apply .bg-gray-950;
   }
@@ -79,6 +114,7 @@ body {
   &-pink {
     @apply .bg-pink-500 .py-1 .px-2 .text-white;
   }
+
   &-blue {
     @apply .bg-blue-500 .py-1 .px-2 .text-white;
   }
@@ -100,7 +136,9 @@ body {
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
   transition: opacity .5s;
 }
 
@@ -108,6 +146,15 @@ body {
 // Some defaults for pages written in Markdown
 
 .jekyll-content {
+
+  strong {
+    @apply .font-medium;
+  }
+
+  h1 {
+    @apply .text-5xl .font-serif .mt-8 .mb-4
+    }
+
   h2 {
     @apply .text-3xl .font-serif .mt-8 .mb-4
     }
@@ -116,11 +163,34 @@ body {
     @apply .text-2xl .font-serif .mt-8 .mb-4
     }
 
+  h4 {
+    @apply .text-xl .font-serif .mt-8 .mb-4
+    }
+
   ul {
-    @apply .list-disc .ml-8
+    @apply .list-disc .my-6;
+
+    li {
+      @apply .ml-8 .my-4;
+    }
+    }
+
+  ol {
+    @apply .list-decimal .my-6;
+    li {
+      @apply .ml-8 .my-4;
+    }
   }
 
   p {
-    @apply .leading-relaxed .my-4
+    @apply .leading-8 .my-4
+    }
+
+  a {
+    @apply .border-b-2 .border-blue-400;
+
+    &:hover {
+      @apply .text-blue-600;
+    }
   }
 }
