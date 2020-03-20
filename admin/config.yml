@@ -4,6 +4,26 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "img/uploads"
 collections:
+  - posts: "posts"
+    label: "Posts"
+    folder: "_posts"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Post Author"
+        name: "author"
+        widget: "relation"
+        collection: "team"
+        searchFields: ["name", "slug"]
+        valueField: "slug"
+        displayFields: ["name"]
+      - label: "Main Image"
+        name: "main_image"
+        widget: "image"
+      - label: "Photo Credit"
+        name: "photo_credit"
+        widget: "string"
   - name: "team"
     label: "Team"
     folder: "_team"
