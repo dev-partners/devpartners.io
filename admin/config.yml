@@ -17,11 +17,11 @@ collections:
         widget: "relation"
         collection: "team"
         searchFields: ["name"]
-        valueField: "id"
+        valueField: "shortname"
         displayFields: ["name"]
       - label: "Main Image"
         name: "main_image"
-        widget: "image"
+        widget: "string"
       - label: "Photo Credit"
         name: "photo_credit"
         widget: "string"
