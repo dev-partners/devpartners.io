@@ -17,7 +17,7 @@ Corona Virus outbreak. While we have all witnessed a fair amount of anxiety-driv
 craziness out there, it is so encouraging to see all of the neighborly actions that members of
 the community have been taking.
 
-For our company, _there have been no major changes in the service_ we are able to provide 
+For our company, _there have been no changes in the service_ we are able to provide 
 (though we might be providing it in our pajamas at certain times). Our entire staff is working 
 remotely from home to keep with [social distancing best practices](https://www.npr.org/sections/health-shots/2020/03/17/817251610/its-time-to-get-serious-about-social-distancing-here-s-how). 
 We, being a tech company, are fortunate in this scenario to be able to do this where many are not.
