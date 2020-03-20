@@ -20,6 +20,6 @@ mix.js('resources/js/app.js', 'js/')
         postCss: [tailwindcss('./tailwind.config.js')],
     })
     .purgeCss({
-        folders: ['./_includes', './_layouts', './_pages', './blog', './resources/js/components'],
+        folders: ['./_includes', './_layouts', './_pages', './blog', './resources/js/components', '_site'],
         extractorPattern: /[A-Za-z0-9-_:%!\/]+/g
     })
