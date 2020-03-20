@@ -14,5 +14,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Display Position", name: "position", widget: "number"}
       - {label: "Photo", name: "photo", widget: "image"}
-      - {label: "Social Links", name: "social", widget: "array"}
+      - {label: "Social Links", name: "social", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
