@@ -20,7 +20,7 @@ the community have been taking.
 For our company, _there have been no changes in the service_ we are able to provide 
 (though we might be providing it in our pajamas at certain times). Our entire staff is working 
 remotely from home to keep with [social distancing best practices](https://www.npr.org/sections/health-shots/2020/03/17/817251610/its-time-to-get-serious-about-social-distancing-here-s-how). 
-We, being a tech company, are fortunate in this scenario to be able to do this where many are not.
+We, being a tech company, are fortunate to be able to work from home when many are not.
 
 The last thing we want to leave you with are a few tips for business owners during these times of constant change:
 
