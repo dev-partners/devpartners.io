@@ -4,7 +4,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "img/uploads"
 collections:
-  - posts: "posts"
+  - name: "posts"
     label: "Posts"
     folder: "_posts"
     fields:
