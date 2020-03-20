@@ -15,8 +15,8 @@ collections:
         name: "author"
         widget: "relation"
         collection: "team"
-        searchFields: ["name", "slug"]
-        valueField: "slug"
+        searchFields: ["name"]
+        valueField: "{{slug}}"
         displayFields: ["name"]
       - label: "Main Image"
         name: "main_image"
