@@ -23,6 +23,16 @@
 <!-- End Google Tag Manager (noscript) -->
 {% include nav_links.md %}
 <div id="app">
+
+    <div class="bg-pink-600 text-white py-2 leading-snug bottom-0 left-0 fixed w-full z-50">
+        <div class="container">
+            <div class="text-center md:text-left md:flex items-center justify-between">
+                <div><a href="{% post_url 2020-03-20-corona-virus-service-updates %}" class="underline md:no-underline"><span class="text-lg">&hearts;</span> &nbsp;We hope you are staying safe during the Corona Virus outbreak.</a></div>
+                <a href="{% post_url 2020-03-20-corona-virus-service-updates %}" class="text-sm hidden md:block border-pink-400 border-2 py-2 px-4 rounded">No Changes in Service</a>
+            </div>
+        </div>
+    </div>
+
     <header id="main-header" class="heading fixed w-full top-0 z-50 active {% if page.no_navbar %} {% else %} bg-gray-950 {% endif %}">
         <div class="py-5">
             <div class="container">
@@ -102,7 +112,7 @@
 
     <footer class="bg-gray-100 text-gray-800">
         <div class="container">
-            <div class="py-6">
+            <div class="pt-6 pb-12">
                 <div class="text-center md:text-left md:flex justify-between">
                     <div class="my-4">Copyright &copy; {{ site.time | date: "%Y" }} DevPartners LLC</div>
                     <div class="my-4 flex justify-center lg:justify-end text-gray-800">

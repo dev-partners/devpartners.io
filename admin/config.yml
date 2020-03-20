@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
+media_folder: "img/uploads"
+collections:
+  - name: "team"
+    label: "Team"
+    folder: "_team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Display Position", name: "position", widget: "number"}
+      - {label: "Photo", name: "photo", widget: "image"}
+      - {label: "Social Links", name: "social", widget: "array"}
+      - {label: "Body", name: "body", widget: "markdown"}
