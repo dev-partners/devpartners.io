@@ -1,11 +1,13 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: dev-partners/devpartners.io
   branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: "img/uploads"
 collections:
   - name: "posts"
     label: "Posts"
+    create: true
     folder: "_posts"
     fields:
       - label: "Title"
@@ -16,7 +18,7 @@ collections:
         widget: "relation"
         collection: "team"
         searchFields: ["name"]
-        valueField: "{{slug}}"
+        valueField: "id"
         displayFields: ["name"]
       - label: "Main Image"
         name: "main_image"
