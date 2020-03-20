@@ -5,7 +5,7 @@ main_image: https://images.unsplash.com/photo-1584118624012-df056829fbd0?ixlib=r
 photo_credit: Photo by CDC on Unsplash
 ---
 
-**Updated 3/20/2020: No major changes in service at this time.**
+**Updated 3/20/2020: No changes in service at this time.**
 
 <!--more-->
 
