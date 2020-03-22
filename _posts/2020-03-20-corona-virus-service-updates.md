@@ -13,7 +13,7 @@ photo_credit: Photo by CDC on Unsplash
 
 First, before we dive in to the details of changes here at Development Partners, we would like to extend 
 our most sincere hope that you and your family are staying safe during this terrifying 
-Coronavirus outbreak. While we have all witnessed a fair amount of anxiety-driven 
+coronavirus outbreak. While we have all witnessed a fair amount of anxiety-driven 
 craziness out there, it is so encouraging to see all of the neighborly actions that members of
 the community have been taking.
 
