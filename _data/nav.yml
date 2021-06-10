@@ -3,7 +3,9 @@ items:
     url: /about
   - title: Success Stories
     url: /success-stories
+  - title: Blog
+    url: /blog
   - title: Careers
-    url: /careers
+      url: /careers
   - title: Contact
     url: /ping
